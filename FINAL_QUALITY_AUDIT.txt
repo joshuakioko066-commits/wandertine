@@ -1,0 +1,17 @@
+{
+  "source": "Wandertine_V5_Thoroughly_Improved.zip",
+  "html_pages": [
+    "about.html",
+    "contact.html",
+    "corporate.html",
+    "destinations.html",
+    "index.html",
+    "packages.html",
+    "privacy.html",
+    "services.html",
+    "terms.html",
+    "thank-you.html"
+  ],
+  "missing_local_references": [],
+  "core_pages_missing": []
+}

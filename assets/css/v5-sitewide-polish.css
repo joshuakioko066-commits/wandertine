@@ -1,0 +1,45 @@
+
+/* WANDERTINE V5 — SITE-WIDE QUALITY & CONSISTENCY */
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden}
+img{max-width:100%;height:auto}
+a,button,input,select,textarea{transition:all .22s ease}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+outline:3px solid rgba(243,154,30,.5);outline-offset:3px}
+.site-header{position:relative;z-index:4000}
+.site-header nav{z-index:4001}
+.site-header nav ul{align-items:center}
+.site-header nav a{white-space:nowrap}
+.site-header nav a.active{font-weight:800}
+.site-header nav a.active::after{width:100%}
+@media(max-width:1000px){
+.site-header nav{max-height:calc(100vh - 84px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.site-header nav ul{width:100%;box-sizing:border-box}
+}
+.footer{
+position:relative;isolation:isolate;overflow:hidden;color:#fff;
+background:
+linear-gradient(90deg,rgba(4,17,36,.97),rgba(5,25,50,.92),rgba(5,25,50,.86)),
+url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat;
+}
+.footer::before{content:"";position:absolute;inset:0;z-index:-1;
+background:radial-gradient(circle at 78% 30%,rgba(243,154,30,.14),transparent 28%),
+linear-gradient(180deg,rgba(8,28,58,.04),rgba(3,13,28,.45));pointer-events:none}
+.footer::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,#f39a1e,#ffd078,#f39a1e)}
+.footer-grid{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:76px 5% 52px;display:grid;grid-template-columns:1.35fr 1fr 1fr 1.15fr;gap:42px}
+.footer a{color:rgba(255,255,255,.8);text-decoration:none}
+.footer a:hover{color:#f39a1e}
+.footer p,.footer li{color:rgba(255,255,255,.72);line-height:1.7}
+.footer h3{color:#fff}
+.footer-logo img{max-height:68px;width:auto;object-fit:contain;margin-bottom:14px}
+.footer-bottom{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:20px 5%;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.58);font-size:.76rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:34px}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr!important;padding:56px 7% 38px}.footer-bottom{padding:18px 7%}}
+.wandertine-whatsapp{z-index:5000!important;right:20px!important;bottom:20px!important}
+@media(max-width:600px){.wandertine-whatsapp{right:12px!important;bottom:12px!important}}
+input,select,textarea{max-width:100%;box-sizing:border-box}
+textarea{resize:vertical}
+button,.btn,.quote-btn{cursor:pointer}
+section{max-width:100%;box-sizing:border-box}
+[class*="grid"]{min-width:0}
+.footer a,.contact-detail a{overflow-wrap:anywhere}

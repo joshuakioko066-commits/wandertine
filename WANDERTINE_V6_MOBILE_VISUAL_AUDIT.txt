@@ -1,0 +1,21 @@
+WANDERTINE V6 MOBILE / VISUAL POLISH
+
+Completed in this build:
+- Footer redesigned to match the supplied reference: Wandertine navy, subtle dotted field, gold headings and bottom accent.
+- Footer is now 4 columns on desktop, 2-column content grouping on mobile, with brand/contact spanning full width.
+- Footer content is protected from right-edge clipping and long email/address overflow.
+- Floating WhatsApp now uses the actual WhatsApp SVG mark instead of the text "WA".
+- Homepage duplicate active navigation state removed.
+- All main-page local asset references checked: no missing local refs.
+- All three hero video slots preserved.
+- Mobile hero, planner, cards, grids and section spacing tightened for small screens.
+- Images below the fold are lazy-loaded; the About hero images remain eager for first paint.
+- Added more context-specific African imagery for About safari, Corporate travel and Destinations safari content.
+- Existing Wandertine brand palette retained: #081C3A, #1F3B93, #F39A1E, #D68000, #F8FAFC.
+
+Mobile layout intent:
+- No horizontal page overflow.
+- Hero CTAs stack cleanly.
+- Planner controls become one-column touch targets.
+- Footer becomes readable two-column navigation with full-width brand/contact blocks.
+- On very narrow screens, the floating WhatsApp label collapses to the icon only.

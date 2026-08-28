@@ -1,0 +1,548 @@
+/* =========================================================
+   WANDERTINE TOURS — HERO V3
+   Cinematic, responsive hero system
+   ========================================================= */
+
+:root{
+    --hero-min-height: 760px;
+    --hero-top-space: 126px;
+}
+
+/* ---------------------------------------------------------
+   Hero shell
+   --------------------------------------------------------- */
+
+.hero{
+    position: relative;
+    isolation: isolate;
+    min-height: max(var(--hero-min-height), 100svh);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    background: #081c3a;
+}
+
+/* Keep the hero below the fixed header without creating
+   an artificial top padding that can clip content. */
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background:
+        radial-gradient(circle at 75% 35%, rgba(31,59,147,.24), transparent 34%),
+        linear-gradient(115deg, rgba(8,28,58,.92) 0%, rgba(8,28,58,.64) 46%, rgba(8,28,58,.38) 100%);
+}
+
+/* ---------------------------------------------------------
+   Video background
+   --------------------------------------------------------- */
+
+.hero-video,
+.hero video{
+    position: absolute;
+    inset: 0;
+    z-index: -4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    background: #081c3a;
+}
+
+/* Dark cinematic treatment */
+.hero-video::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(8,28,58,.25);
+}
+
+/* If the video element itself is used, this overlay sits
+   above it through the hero pseudo elements below. */
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, rgba(8,28,58,.42) 0%, rgba(8,28,58,.08) 24%, rgba(8,28,58,.16) 68%, rgba(8,28,58,.72) 100%),
+        linear-gradient(90deg, rgba(8,28,58,.50), transparent 68%);
+}
+
+/* ---------------------------------------------------------
+   Hero inner container
+   --------------------------------------------------------- */
+
+.hero .container,
+.hero-container{
+    position: relative;
+    z-index: 2;
+    width: min(1320px, calc(100% - 48px));
+    margin-inline: auto;
+    padding-top: var(--hero-top-space);
+    padding-bottom: 80px;
+}
+
+.hero-content{
+    width: min(760px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   Eyebrow / badge
+   --------------------------------------------------------- */
+
+.hero-tag,
+.hero-eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 9px 16px;
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 999px;
+    background: rgba(255,255,255,.10);
+    color: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.hero-tag::before,
+.hero-eyebrow::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold, #f39a1e);
+    box-shadow: 0 0 0 5px rgba(243,154,30,.13);
+}
+
+/* ---------------------------------------------------------
+   Heading
+   --------------------------------------------------------- */
+
+.hero h1{
+    max-width: 900px;
+    margin: 0 0 22px;
+    color: #fff;
+    font-size: clamp(3.15rem, 6.4vw, 6.5rem);
+    line-height: .98;
+    font-weight: 800;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+    text-shadow: 0 8px 35px rgba(0,0,0,.20);
+}
+
+.hero h1 span{
+    color: var(--gold, #f39a1e);
+}
+
+.hero .hero-highlight{
+    color: var(--gold, #f39a1e);
+}
+
+/* ---------------------------------------------------------
+   Supporting text
+   --------------------------------------------------------- */
+
+.hero p{
+    width: min(650px, 100%);
+    margin: 0 0 32px;
+    color: rgba(255,255,255,.90);
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    line-height: 1.85;
+    text-wrap: pretty;
+}
+
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
+
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.hero .btn-primary,
+.hero .btn-secondary{
+    margin: 0;
+}
+
+.hero .btn-primary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 27px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--gold, #f39a1e), #D68000);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 14px 30px rgba(243,154,30,.22);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.hero .btn-primary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(243,154,30,.32);
+}
+
+.hero .btn-secondary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 27px;
+    border: 1px solid rgba(255,255,255,.50);
+    border-radius: 999px;
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background .3s ease, color .3s ease, transform .3s ease;
+}
+
+.hero .btn-secondary:hover{
+    background: #fff;
+    color: var(--dark, #081c3a);
+    transform: translateY(-3px);
+}
+
+/* ---------------------------------------------------------
+   Hero badges / trust row
+   --------------------------------------------------------- */
+
+.hero-badges{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.hero-badges a,
+.hero-badges span{
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 999px;
+    background: rgba(255,255,255,.08);
+    color: rgba(255,255,255,.92);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ---------------------------------------------------------
+   Optional hero visual/card
+   --------------------------------------------------------- */
+
+.hero-image{
+    position: relative;
+    width: min(44%, 560px);
+    min-height: 460px;
+    margin-left: auto;
+    z-index: 2;
+}
+
+.hero-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 30px 70px rgba(0,0,0,.22);
+}
+
+.hero-layout{
+    display: grid;
+    grid-template-columns: minmax(0,1.1fr) minmax(320px,.7fr);
+    align-items: center;
+    gap: clamp(40px, 6vw, 100px);
+}
+
+/* ---------------------------------------------------------
+   Scroll indicator
+   --------------------------------------------------------- */
+
+.hero-scroll{
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    z-index: 4;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,.72);
+    text-decoration: none;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.hero-scroll-line{
+    position: relative;
+    width: 1px;
+    height: 38px;
+    overflow: hidden;
+    background: rgba(255,255,255,.25);
+}
+
+.hero-scroll-line::after{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    animation: heroScroll 2s ease-in-out infinite;
+}
+
+@keyframes heroScroll{
+    0%{transform:translateY(0);}
+    60%,100%{transform:translateY(300%);}
+}
+
+/* ---------------------------------------------------------
+   Entrance animations
+   --------------------------------------------------------- */
+
+.hero-content > *{
+    animation: heroFadeUp .8s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-content > :nth-child(1){animation-delay:.08s;}
+.hero-content > :nth-child(2){animation-delay:.16s;}
+.hero-content > :nth-child(3){animation-delay:.24s;}
+.hero-content > :nth-child(4){animation-delay:.32s;}
+.hero-content > :nth-child(5){animation-delay:.40s;}
+
+@keyframes heroFadeUp{
+    from{
+        opacity:0;
+        transform:translateY(24px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ---------------------------------------------------------
+   Video fallback / loading
+   --------------------------------------------------------- */
+
+.hero.video-loading{
+    background:
+        linear-gradient(rgba(8,28,58,.76),rgba(8,28,58,.76)),
+        url("../images/hero-poster.jpg") center/cover no-repeat,
+        #081c3a;
+}
+
+.hero video[poster]{
+    object-position:center;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px){
+    .hero{
+        min-height: max(720px, 100svh);
+    }
+
+    .hero .container,
+    .hero-container{
+        width: min(100% - 36px, 1000px);
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+
+    .hero h1{
+        font-size: clamp(3rem, 7vw, 5.4rem);
+    }
+
+    .hero-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image{
+        width: min(560px, 100%);
+        min-height: 360px;
+        margin: 15px auto 0;
+    }
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 900px){
+    .hero{
+        min-height: 100svh;
+        align-items: center;
+    }
+
+    .hero .container,
+    .hero-container{
+        width: calc(100% - 32px);
+        padding-top: 112px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1{
+        max-width: 720px;
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+        line-height: 1.02;
+        letter-spacing: -.04em;
+    }
+
+    .hero p{
+        max-width: 620px;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .hero-badges{
+        justify-content: center;
+    }
+
+    .hero-image{
+        width: 100%;
+        min-height: 320px;
+    }
+
+    .hero-scroll{
+        bottom: 14px;
+    }
+}
+
+/* ---------------------------------------------------------
+   Small phones
+   --------------------------------------------------------- */
+
+@media (max-width: 520px){
+    .hero .container,
+    .hero-container{
+        width: calc(100% - 24px);
+        padding-top: 104px;
+        padding-bottom: 70px;
+    }
+
+    .hero-tag,
+    .hero-eyebrow{
+        margin-bottom: 17px;
+        padding: 8px 13px;
+        font-size: .66rem;
+        letter-spacing: .12em;
+    }
+
+    .hero h1{
+        font-size: clamp(2.55rem, 13.5vw, 3.5rem);
+        margin-bottom: 18px;
+    }
+
+    .hero p{
+        margin-bottom: 25px;
+        font-size: .94rem;
+    }
+
+    .hero-buttons{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero .btn-primary,
+    .hero .btn-secondary{
+        width: min(100%, 330px);
+    }
+
+    .hero-badges{
+        gap: 8px;
+        margin-top: 25px;
+    }
+
+    .hero-badges a,
+    .hero-badges span{
+        font-size: .74rem;
+    }
+
+    .hero-image{
+        min-height: 260px;
+    }
+}
+
+/* ---------------------------------------------------------
+   Portrait video handling
+   --------------------------------------------------------- */
+
+/*
+   Wandertine's current hero video is portrait-oriented.
+   The desktop rule intentionally crops it rather than
+   stretching it. Mobile gets a more central crop.
+*/
+@media (min-width: 901px){
+    .hero video{
+        object-position: center 42%;
+    }
+}
+
+@media (max-width: 900px){
+    .hero video{
+        object-position: center center;
+    }
+}
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce){
+    .hero-content > *{
+        animation: none !important;
+    }
+
+    .hero-scroll-line::after{
+        animation: none !important;
+    }
+
+    .hero .btn-primary,
+    .hero .btn-secondary{
+        transition: none !important;
+    }
+}

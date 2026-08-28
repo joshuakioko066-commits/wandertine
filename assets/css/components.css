@@ -1,0 +1,405 @@
+/* =========================================================
+   WANDERTINE TOURS & TRAVEL
+   COMPONENTS
+   Version 2.0
+========================================================= */
+
+
+/* ===========================
+PRIMARY BUTTON
+=========================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.7rem;
+    padding:16px 34px;
+    border-radius:var(--radius-round);
+    font-weight:600;
+    transition:var(--transition);
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:var(--white);
+    box-shadow:var(--shadow-sm);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    background:var(--accent-dark);
+    box-shadow:var(--shadow-md);
+}
+
+
+/* ===========================
+SECONDARY BUTTON
+=========================== */
+
+.btn-secondary{
+    border:2px solid var(--white);
+    color:var(--white);
+}
+
+.btn-secondary:hover{
+    background:var(--white);
+    color:var(--dark);
+}
+
+
+/* ===========================
+OUTLINE BUTTON
+=========================== */
+
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary);
+    background:transparent;
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:var(--white);
+}
+
+
+/* ===========================
+TEXT BUTTON
+=========================== */
+
+.btn-text{
+
+    color:var(--primary);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+
+}
+
+.btn-text i{
+
+    transition:var(--transition);
+
+}
+
+.btn-text:hover i{
+
+    transform:translateX(6px);
+
+}
+
+
+/* ===========================
+SECTION BADGE
+=========================== */
+
+.badge{
+
+display:inline-flex;
+align-items:center;
+gap:.6rem;
+
+padding:10px 22px;
+
+background:#EEF4FF;
+
+color:var(--primary);
+
+border-radius:999px;
+
+font-size:.9rem;
+
+font-weight:600;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+}
+
+
+/* ===========================
+CARD
+=========================== */
+
+.card{
+
+background:var(--white);
+
+border-radius:var(--radius-lg);
+
+box-shadow:var(--shadow-sm);
+
+overflow:hidden;
+
+transition:var(--transition);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+/* ===========================
+CARD IMAGE
+=========================== */
+
+.card-image{
+
+overflow:hidden;
+
+}
+
+.card-image img{
+
+transition:.7s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+/* ===========================
+CARD CONTENT
+=========================== */
+
+.card-content{
+
+padding:2rem;
+
+}
+
+
+/* ===========================
+IMAGE WRAPPER
+=========================== */
+
+.image-box{
+
+overflow:hidden;
+
+border-radius:var(--radius-lg);
+
+}
+
+.image-box img{
+
+transition:.8s;
+
+}
+
+.image-box:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+/* ===========================
+FORM
+=========================== */
+
+.form-group{
+
+display:flex;
+
+flex-direction:column;
+
+gap:.6rem;
+
+}
+
+.form-control{
+
+width:100%;
+
+padding:18px;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+background:var(--white);
+
+transition:var(--transition);
+
+}
+
+.form-control:focus{
+
+border-color:var(--primary);
+
+outline:none;
+
+box-shadow:0 0 0 4px rgba(31,59,147,.08);
+
+}
+
+
+/* ===========================
+LABEL
+=========================== */
+
+label{
+
+font-weight:500;
+
+color:var(--dark);
+
+}
+
+
+/* ===========================
+TAG
+=========================== */
+
+.tag{
+
+display:inline-flex;
+
+padding:8px 18px;
+
+background:#EEF4FF;
+
+border-radius:999px;
+
+font-size:.85rem;
+
+font-weight:600;
+
+color:var(--primary);
+
+}
+
+
+/* ===========================
+ICON BOX
+=========================== */
+
+.icon-box{
+
+width:70px;
+
+height:70px;
+
+border-radius:20px;
+
+background:#EEF4FF;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+color:var(--primary);
+
+transition:var(--transition);
+
+}
+
+.card:hover .icon-box{
+
+background:var(--accent);
+
+color:white;
+
+}
+
+
+/* ===========================
+DIVIDER
+=========================== */
+
+.divider{
+
+width:70px;
+
+height:4px;
+
+background:var(--accent);
+
+border-radius:999px;
+
+margin:1.5rem auto;
+
+}
+
+
+/* ===========================
+OVERLAY
+=========================== */
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+180deg,
+rgba(8,28,58,.1),
+rgba(8,28,58,.8)
+);
+
+}
+
+
+/* ===========================
+ANIMATIONS
+=========================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.8s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+/* ===========================
+SMALL SHADOW
+=========================== */
+
+.shadow{
+
+box-shadow:var(--shadow-sm);
+
+}
+
+
+/* ===========================
+MEDIUM SHADOW
+=========================== */
+
+.shadow-lg{
+
+box-shadow:var(--shadow-lg);
+
+}

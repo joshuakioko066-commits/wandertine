@@ -1,0 +1,224 @@
+/* =========================================================
+   WANDERTINE TOURS & TRAVEL
+   LAYOUT SYSTEM
+   Version 2.0
+========================================================= */
+
+/* ===============================
+CONTAINER
+=============================== */
+
+.container{
+    width:min(var(--container), calc(100% - 2rem));
+    margin-inline:auto;
+}
+
+/* Wider container for hero */
+.container-wide{
+    width:min(1400px, calc(100% - 2rem));
+    margin-inline:auto;
+}
+
+/* Narrow container for forms/content */
+.container-sm{
+    width:min(900px, calc(100% - 2rem));
+    margin-inline:auto;
+}
+
+/* ===============================
+SECTION SPACING
+=============================== */
+
+.section{
+    padding:var(--space-2xl) 0;
+}
+
+.section-sm{
+    padding:var(--space-xl) 0;
+}
+
+.section-lg{
+    padding:9rem 0;
+}
+
+/* ===============================
+GRID SYSTEM
+=============================== */
+
+.grid{
+    display:grid;
+    gap:2rem;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:3rem;
+    align-items:center;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+}
+
+.grid-4{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
+}
+
+/* Auto-fit Grid */
+
+.grid-auto{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2rem;
+}
+
+/* ===============================
+FLEX UTILITIES
+=============================== */
+
+.flex{
+    display:flex;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===============================
+ALIGNMENT
+=============================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+/* ===============================
+WIDTH HELPERS
+=============================== */
+
+.w-100{
+    width:100%;
+}
+
+.mx-auto{
+    margin-inline:auto;
+}
+
+/* ===============================
+DISPLAY HELPERS
+=============================== */
+
+.hidden{
+    display:none;
+}
+
+.relative{
+    position:relative;
+}
+
+.absolute{
+    position:absolute;
+}
+
+/* ===============================
+GAP UTILITIES
+=============================== */
+
+.gap-sm{
+    gap:1rem;
+}
+
+.gap-md{
+    gap:2rem;
+}
+
+.gap-lg{
+    gap:3rem;
+}
+
+/* ===============================
+SECTION TITLE
+=============================== */
+
+.section-title{
+    max-width:760px;
+    margin:0 auto 4rem;
+    text-align:center;
+}
+
+.section-title span{
+    display:inline-block;
+    color:var(--accent);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:1rem;
+}
+
+.section-title h2{
+    margin-bottom:1.2rem;
+}
+
+.section-title p{
+    color:var(--text-light);
+    margin:0;
+}
+
+/* ===============================
+RESPONSIVE
+=============================== */
+
+@media(max-width:992px){
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+        grid-template-columns:1fr;
+    }
+
+    .flex-between{
+        flex-direction:column;
+        gap:2rem;
+    }
+
+    .section{
+        padding:5rem 0;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container,
+    .container-wide,
+    .container-sm{
+        width:min(100%, calc(100% - 1.5rem));
+    }
+
+}

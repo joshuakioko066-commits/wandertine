@@ -1,0 +1,259 @@
+/* =========================================================
+   WANDERTINE TOURS & TRAVEL
+   BASE STYLES
+   Version 2.0
+========================================================= */
+
+/* ===============================
+GOOGLE FONTS
+=============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===============================
+CSS VARIABLES
+=============================== */
+
+:root{
+/* Brand */
+--primary:#1F3B93;
+--secondary:#1D75BC;
+--accent:#F39A1E;
+--accent-dark:#D68000;
+
+/* Neutral */
+
+--dark:#081C3A;
+--dark-2:#12294D;
+
+--text:#374151;
+--text-light:#6B7280;
+
+--white:#FFFFFF;
+--background:#FFFFFF;
+--section:#F8FAFC;
+
+--border:#E5E7EB;
+
+/* Status */
+
+--success:#16A34A;
+--danger:#DC2626;
+
+/* Typography */
+
+--heading:'Playfair Display',serif;
+--body:'Poppins',sans-serif;
+
+/* Width */
+
+--container:1320px;
+
+/* Radius */
+
+--radius-sm:12px;
+--radius-md:18px;
+--radius-lg:28px;
+--radius-xl:40px;
+--radius-round:999px;
+
+/* Shadows */
+
+--shadow-sm:
+0 8px 25px rgba(15,23,42,.05);
+
+--shadow-md:
+0 20px 45px rgba(15,23,42,.08);
+
+--shadow-lg:
+0 35px 80px rgba(15,23,42,.12);
+
+/* Transition */
+
+--transition:.35s ease;
+
+/* Spacing */
+
+--space-xs:.5rem;
+--space-sm:1rem;
+--space-md:2rem;
+--space-lg:3rem;
+--space-xl:5rem;
+--space-2xl:7rem;
+
+}
+
+/* ===============================
+RESET
+=============================== */
+
+*,
+*::before,
+*::after{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+scroll-padding-top:90px;
+
+}
+
+body{
+
+font-family:var(--body);
+font-size:18px;
+line-height:1.7;
+color:var(--text);
+background:var(--background);
+overflow-x:hidden;
+text-rendering:optimizeLegibility;
+-webkit-font-smoothing:antialiased;
+
+}
+
+/* ===============================
+IMAGES
+=============================== */
+
+img{
+
+display:block;
+width:100%;
+height:auto;
+
+}
+
+/* ===============================
+LINKS
+=============================== */
+
+a{
+
+text-decoration:none;
+color:inherit;
+transition:var(--transition);
+
+}
+
+/* ===============================
+LISTS
+=============================== */
+
+ul{
+
+list-style:none;
+
+}
+
+/* ===============================
+BUTTONS
+=============================== */
+
+button{
+
+font:inherit;
+cursor:pointer;
+border:none;
+background:none;
+
+}
+
+/* ===============================
+INPUTS
+=============================== */
+
+input,
+textarea,
+select{
+
+font:inherit;
+
+}
+
+/* ===============================
+HEADINGS
+=============================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+font-family:var(--heading);
+font-weight:700;
+line-height:1.15;
+color:var(--dark);
+
+}
+
+h1{
+
+font-size:clamp(3rem,6vw,5rem);
+
+}
+
+h2{
+
+font-size:clamp(2.2rem,5vw,3.5rem);
+
+}
+
+h3{
+
+font-size:clamp(1.6rem,3vw,2rem);
+
+}
+
+p{
+
+margin-bottom:1rem;
+
+}
+
+/* ===============================
+SELECTION
+=============================== */
+
+::selection{
+
+background:var(--accent);
+color:var(--white);
+
+}
+
+/* ===============================
+SCROLLBAR
+=============================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#EEF2F7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--accent);
+
+}

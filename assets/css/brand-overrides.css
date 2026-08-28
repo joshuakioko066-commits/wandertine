@@ -1,0 +1,231 @@
+
+/* =========================================================
+   WANDERTINE BRAND / CONTRAST OVERRIDES
+   Keeps the original brand palette:
+   Navy #081C3A | Primary Blue #1F3B93 | Gold #F39A1E
+========================================================= */
+:root{
+  --primary:#1F3B93 !important;
+  --secondary:#1D75BC !important;
+  --accent:#F39A1E !important;
+  --accent-dark:#D68000 !important;
+  --dark:#081C3A !important;
+  --dark-2:#12294D !important;
+  --text:#374151 !important;
+  --text-light:#6B7280 !important;
+  --white:#FFFFFF !important;
+  --background:#FFFFFF !important;
+  --section:#F8FAFC !important;
+  --border:#E5E7EB !important;
+  --wt-navy:#081C3A !important;
+  --wt-gold:#F39A1E !important;
+  --wt-muted:#68748A !important;
+  --wt-cream:#F7F4EE !important;
+}
+
+/* Reliable readability on light sections */
+main .section-label:not(.light),
+main .eyebrow:not(.light),
+main .section-kicker:not(.light){
+  color:#D68000 !important;
+}
+main .section-heading h2,
+main .section-title,
+main h2:not(.light),
+main h3:not(.light),
+main h4:not(.light){
+  color:#081C3A !important;
+}
+main p,
+main li{
+  color:#374151;
+}
+main .muted,
+main .text-muted,
+main .small-copy{
+  color:#5F6B7A !important;
+}
+
+/* Dark sections: force readable white copy */
+.dark-section,
+.premium-section.dark,
+.hero,
+.contact-hero,
+.corp-hero,
+.dest-hero,
+.packages-hero,
+.services-hero,
+.footer,
+main [class*="dark"]{
+  color:#fff;
+}
+.dark-section p,
+.premium-section.dark p,
+.hero p,
+.contact-hero p,
+.corp-hero p,
+.dest-hero p,
+.packages-hero p,
+.services-hero p,
+.footer p{
+  color:rgba(255,255,255,.88) !important;
+}
+
+/* Never allow headings to disappear on image overlays */
+.hero h1,.hero h2,.hero h3,
+.contact-hero h1,.contact-hero h2,
+.corp-hero h1,.corp-hero h2,
+.dest-hero h1,.dest-hero h2,
+.packages-hero h1,.packages-hero h2,
+.services-hero h1,.services-hero h2{
+  color:#fff !important;
+}
+.hero .section-label,.contact-hero .section-label,
+.corp-hero .section-label,.dest-hero .section-label,
+.packages-hero .section-label,.services-hero .section-label{
+  color:#F39A1E !important;
+}
+
+/* Cards on white backgrounds */
+.card,.service-card,.package-card,.destination-card,
+.experience-card,.info-card,.contact-info-card,
+.corp-hero-panel{
+  color:#081C3A;
+}
+.card p,.service-card p,.package-card p,.destination-card p,
+.experience-card p,.info-card p,.contact-info-card p,
+.corp-hero-panel p{
+  color:#4B5563 !important;
+}
+
+/* Brand buttons */
+.btn-primary,.btn-accent,.btn-gold,
+button[type="submit"]{
+  background:#F39A1E !important;
+  color:#081C3A !important;
+  border-color:#F39A1E !important;
+  font-weight:700;
+}
+.btn-primary:hover,.btn-accent:hover,.btn-gold:hover,
+button[type="submit"]:hover{
+  background:#D68000 !important;
+  color:#fff !important;
+}
+.btn-outline,.btn-secondary{
+  border-color:#1F3B93 !important;
+  color:#1F3B93 !important;
+}
+.btn-outline:hover,.btn-secondary:hover{
+  background:#1F3B93 !important;
+  color:#fff !important;
+}
+
+/* Image treatment: warm, consistent brand overlays rather than unrelated tones */
+.hero-shade,
+.dest-hero-overlay,
+.packages-hero-overlay,
+.services-hero-overlay,
+.corp-hero-overlay,
+.contact-hero-overlay{
+  background:linear-gradient(90deg,rgba(8,28,58,.86) 0%,rgba(8,28,58,.55) 52%,rgba(8,28,58,.18) 100%) !important;
+}
+
+/* Prevent image sections from looking washed out */
+.about-hero-media img,
+.dest-hero-image img,
+.packages-hero-bg img,
+.corp-hero-bg img,
+.contact-hero-bg img,
+.service-card img,
+.package-card img,
+.destination-card img{
+  filter:saturate(.98) contrast(1.03);
+}
+
+/* Form readability */
+input,textarea,select{
+  color:#081C3A !important;
+  background:#fff !important;
+  border-color:#D7DEE8 !important;
+}
+input::placeholder,textarea::placeholder{
+  color:#68748A !important;
+}
+label{
+  color:#081C3A !important;
+  font-weight:600;
+}
+
+/* Footer keeps original navy/gold identity */
+.footer,
+.site-footer{
+  background:#081C3A !important;
+}
+.footer a,.site-footer a{
+  color:rgba(255,255,255,.88) !important;
+}
+.footer a:hover,.site-footer a:hover{
+  color:#F39A1E !important;
+}
+
+/* Accessibility focus */
+a:focus-visible,button:focus-visible,input:focus-visible,
+textarea:focus-visible,select:focus-visible{
+  outline:3px solid #F39A1E !important;
+  outline-offset:3px;
+}
+
+/* Image cards: consistent premium crop */
+.service-card img,.package-card img,.destination-card img{
+  aspect-ratio:16/10;
+  object-fit:cover;
+}
+
+/* Mobile contrast and spacing */
+@media(max-width:768px){
+  body{font-size:16px;}
+  .hero-shade,.dest-hero-overlay,.packages-hero-overlay,
+  .services-hero-overlay,.corp-hero-overlay,.contact-hero-overlay{
+    background:linear-gradient(180deg,rgba(8,28,58,.78),rgba(8,28,58,.88)) !important;
+  }
+}
+
+
+/* V3 production polish: one authoritative brand system */
+:root{
+  --primary:#1F3B93 !important;
+  --secondary:#1F3B93 !important;
+  --accent:#F39A1E !important;
+  --accent-dark:#D68000 !important;
+  --dark:#081C3A !important;
+  --dark-2:#12294D !important;
+  --text:#374151 !important;
+  --text-light:#6B7280 !important;
+  --background:#FFFFFF !important;
+  --section:#F8FAFC !important;
+  --border:#E5E7EB !important;
+}
+
+.hero.video-loading{background-image:url("../images/hero-poster.jpg") !important;background-position:center;background-size:cover;}
+.hero-slide.media-fallback video{display:none;}
+.hero-slide-media{background-color:#081C3A;}
+.hero-shade{background:linear-gradient(90deg,rgba(8,28,58,.84) 0%,rgba(8,28,58,.58) 48%,rgba(8,28,58,.28) 100%) !important;}
+
+/* Consistent readability on every surface */
+.section-label,.eyebrow{color:#D68000;}
+.section-label.light{color:#F39A1E !important;}
+.light-text,.section-dark p,.dark-section p{color:rgba(255,255,255,.88) !important;}
+
+/* Form accessibility and anti-spam honeypot */
+.form-honeypot{position:absolute !important;left:-10000px !important;width:1px !important;height:1px !important;opacity:0 !important;pointer-events:none !important;}
+.contact-form-card input::placeholder,.contact-form-card textarea::placeholder{color:#6B7280 !important;opacity:1;}
+.contact-form-card input:focus,.contact-form-card select:focus,.contact-form-card textarea:focus{outline:3px solid rgba(243,154,30,.22) !important;outline-offset:1px;}
+
+/* Premium social controls */
+.footer-socials a{font-size:0 !important;}
+.footer-socials a svg{width:17px;height:17px;display:block;fill:currentColor;}
+.footer-socials a:hover{color:#081C3A !important;}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto !important;animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wandertine.co.ke/sitemap.xml
